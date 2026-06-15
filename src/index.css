@@ -1,0 +1,82 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #09090b;
+  --surface:   #111113;
+  --surface2:  #18181b;
+  --surface3:  #1f1f23;
+  --surface4:  #27272a;
+  --border:    #2e2e33;
+  --border2:   #3f3f46;
+  --accent:    #7c3aed;
+  --accent-h:  #6d28d9;
+  --accent-l:  #a78bfa;
+  --accent-xl: #ede9fe;
+  --green:     #10b981;
+  --red:       #ef4444;
+  --yellow:    #f59e0b;
+  --text:      #fafafa;
+  --text2:     #a1a1aa;
+  --text3:     #71717a;
+  --text4:     #3f3f46;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+button { cursor: pointer; font-family: inherit; }
+select, input, textarea { font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+
+/* Global animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes badgePop {
+  0%   { transform: translateX(-50%) scale(0.8); opacity: 0; }
+  60%  { transform: translateX(-50%) scale(1.1); }
+  100% { transform: translateX(-50%) scale(1);   opacity: 1; }
+}
+
+.animate-fadeInUp  { animation: fadeInUp 0.5s ease forwards; }
+.animate-fadeIn    { animation: fadeIn 0.4s ease forwards; }
+.animate-scaleIn   { animation: scaleIn 0.3s ease forwards; }

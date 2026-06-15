@@ -1,0 +1,194 @@
+.orders-page {
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+}
+
+.orders-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.orders-title {
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.orders-sub {
+  font-size: 16px;
+  color: var(--text2);
+  margin-bottom: 48px;
+}
+
+/* Empty State */
+.orders-empty {
+  text-align: center;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 20px;
+  padding: 60px 24px;
+}
+.oe-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+.orders-empty h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.orders-empty p {
+  font-size: 14px;
+  color: var(--text3);
+  max-width: 400px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+.oe-btn {
+  display: inline-flex;
+  background: linear-gradient(135deg, var(--accent), var(--accent-h));
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.oe-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124,58,237,0.3);
+}
+
+/* Orders List */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.order-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  animation: scaleIn 0.4s ease both;
+}
+
+.order-header {
+  padding: 20px 24px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.order-id {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.order-date {
+  font-size: 12px;
+  color: var(--text3);
+}
+.order-total {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.total-lbl {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text3);
+}
+.total-val {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--accent-l);
+}
+
+/* Items */
+.order-items {
+  padding: 12px 24px;
+}
+.o-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.o-item:last-child {
+  border-bottom: none;
+}
+.oi-preview {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.oi-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.oi-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.oi-type {
+  font-size: 12px;
+  color: var(--text3);
+}
+.oi-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Footer */
+.order-footer {
+  padding: 16px 24px;
+  background: var(--surface2);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-method {
+  font-size: 13px;
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.order-method::before {
+  content: '💳';
+}
+.order-receipt-btn {
+  background: transparent;
+  color: var(--accent-l);
+  border: 1px solid rgba(124,58,237,0.3);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.order-receipt-btn:hover {
+  background: rgba(124,58,237,0.1);
+}
