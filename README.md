@@ -1,16 +1,257 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ⌨️ CodeFrame
+### Beautiful Code Screenshot Designer
 
-Currently, two official plugins are available:
+*Transform your code into stunning, shareable screenshots in seconds.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-code--frame--lemon.vercel.app-7c3aed?style=for-the-badge)](https://code-frame-lemon.vercel.app)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)](https://reactjs.org)
+[![Vite](https://img.shields.io/badge/Vite-8-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🎯 What is CodeFrame?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**CodeFrame** is a frontend-only React.js web application that lets developers paste any code snippet and instantly generate a **beautiful, professional-looking screenshot** — perfect for sharing on LinkedIn, Twitter, GitHub, or presentations.
+
+No backend. No server. Everything runs in the browser.
+
+> 📚 Built as **Case Study #120** — *Code Snippet Beautiful Mockup Designer*
+> React JS | Semester II | ITM Skills University, Kharghar
+
+---
+
+## ✨ Features
+
+<table>
+<tr>
+<td>
+
+**🔐 Authentication**
+- Email + Password Login & Signup
+- All routes protected
+- Persists via localStorage
+
+**🎨 Editor Themes (8)**
+- Dracula, One Dark, Monokai *(Free)*
+- Nord, GitHub Dark *(₹49)*
+- Night Owl, Tokyo Night *(₹79)*
+- Solarized *(₹99)*
+
+**🌈 Backgrounds (15)**
+- 6 Free gradient backgrounds
+- 9 Premium backgrounds (₹29–₹99)
+
+</td>
+<td>
+
+**📸 Export & Share**
+- Export PNG at 3x resolution
+- Copy image to clipboard
+- Works 100% client-side
+
+**🛒 Cart & Checkout**
+- Add themes & plans to cart
+- 3-step checkout flow
+- UPI / Card / Net Banking
+
+**💰 Pricing Plans**
+- Free — ₹0/month
+- Pro — ₹199/month
+- Team — ₹499/month
+
+</td>
+<td>
+
+**✦ Code Features**
+- Syntax highlighting (6 languages)
+- 6 code fonts to choose from
+- One-click code beautifier
+- Line numbers toggle
+- macOS window frame
+
+**🎬 UI & Experience**
+- Scroll-triggered animations
+- Save & load presets
+- Canvas controls (padding, shadow, radius)
+- Aspect ratio presets (1:1, 16:9, 4:3)
+- Toast notifications
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **React** | 19.x | UI library, hooks, component architecture |
+| **Vite** | 8.x | Build tool — runs with `npm run dev` |
+| **React Router** | v7 | 6-page routing + protected routes |
+| **Context API** | Built-in | Global state — auth, cart, toasts |
+| **html-to-image** | 1.11.x | DOM → PNG export at 3x resolution |
+| **CSS Variables** | — | Dynamic theming, dark mode |
+| **LocalStorage** | — | Auth persistence + preset saving |
+| **IntersectionObserver** | — | Scroll-triggered entrance animations |
+| **Regex** | — | Custom-built syntax highlighting tokenizer |
+
+---
+
+## 📄 Pages (6 Total)
+
+```
+🔐  /login     → Login & Signup         (shown first — all routes protected)
+🏠  /          → Home                   (landing page, features, hero)
+⌨️  /editor    → Editor                 (main code mockup designer)
+💰  /pricing   → Pricing                (plans + theme/bg pricing with cart)
+ℹ️  /about     → About                  (team, tech stack, timeline)
+🛒  /checkout  → Checkout               (3-step payment flow)
+```
+
+---
+
+## 📁 Project Structure
+
+```
+codeframe/
+├── index.html                     ← Entry HTML, loads 7 Google Fonts
+├── vite.config.js                 ← Vite + React plugin config
+├── package.json                   ← Project dependencies
+└── src/
+    ├── main.jsx                   ← App entry — BrowserRouter wrapper
+    ├── App.jsx                    ← All routes + ProtectedRoute logic
+    ├── index.css                  ← Global styles + CSS variables
+    ├── context/
+    │   └── AppContext.jsx         ← Global state (auth, cart, toasts)
+    ├── data/
+    │   └── constants.js           ← All themes, backgrounds, plans, fonts
+    ├── utils/
+    │   ├── tokenizer.js           ← Custom syntax highlighting engine
+    │   └── beautify.js            ← Client-side code formatter
+    ├── components/
+    │   ├── Navbar.jsx             ← Navigation + cart badge + auth buttons
+    │   ├── CartDrawer.jsx         ← Slide-in cart sidebar
+    │   └── ToastContainer.jsx     ← Popup notification system
+    └── pages/
+        ├── LoginPage.jsx          ← Login + Signup form
+        ├── HomePage.jsx           ← Landing page
+        ├── EditorPage.jsx         ← Code mockup designer
+        ├── PricingPage.jsx        ← Pricing + cart
+        ├── AboutPage.jsx          ← About page
+        └── CheckoutPage.jsx       ← 3-step payment checkout
+```
+
+---
+
+## ⚙️ Getting Started
+
+```bash
+# 1 — Clone the repository
+git clone https://github.com/akshaysharma150096725107/codeframe.git
+cd codeframe
+
+# 2 — Install dependencies
+npm install
+
+# 3 — Start development server
+npm run dev
+# ✅ Opens at → http://localhost:5173
+
+# 4 — Build for production
+npm run build
+```
+
+> 💡 **Demo Login:** Use any email + any password (minimum 6 characters)
+
+---
+
+## 🚀 Deployment
+
+This project is deployed on **Vercel**.
+
+1. Push code to GitHub
+2. Go to [vercel.com](https://vercel.com) → **New Project**
+3. Import your GitHub repo → Click **Deploy**
+4. Live in 60 seconds ✅
+
+---
+
+## 🧠 Key React Concepts Used
+
+**1. Protected Routes** — Redirects unauthenticated users to `/login`
+```jsx
+function ProtectedRoute({ children }) {
+  const { user } = useApp()
+  if (!user) return <Navigate to="/login" replace />
+  return children
+}
+```
+
+**2. Context API** — Share auth, cart, and toast state globally without prop drilling
+```jsx
+const { user, cart, addToCart, showToast } = useApp()
+```
+
+**3. Custom Hook — useInView** — Scroll animations using IntersectionObserver
+```jsx
+function useInView(threshold = 0.1) {
+  const ref = useRef(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true) },
+      { threshold }
+    )
+    obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [])
+  return [ref, inView]
+}
+```
+
+**4. PNG Export** — Captures DOM element as high-res image
+```jsx
+const url = await toPng(stageRef.current, { pixelRatio: 3 })
+const a = document.createElement('a')
+a.download = 'codeframe.png'
+a.href = url
+a.click()
+```
+
+---
+
+## 👨‍💻 Developer
+
+<div align="center">
+
+| | |
+|--|--|
+| **Name** | Akshay Sharma |
+| **Roll No** | 150096725107 |
+| **Branch** | B.Tech Computer Science Engineering |
+| **Batch** | 2025 – 2029 |
+| **Semester** | II |
+| **Subject** | React JS |
+| **Case Study** | #120 — Code Snippet Beautiful Mockup Designer |
+| **University** | ITM Skills University, Kharghar |
+| **Professor** | Prasad Shridhar Junghare |
+
+</div>
+
+---
+
+<div align="center">
+
+**⭐ If you found this helpful, give it a star on GitHub!**
+
+*Built with ❤️ using React + Vite | ITM Skills University 2025*
+
+[![Live](https://img.shields.io/badge/Visit_Live_Site-7c3aed?style=for-the-badge)](https://code-frame-lemon.vercel.app)
+
+</div>
