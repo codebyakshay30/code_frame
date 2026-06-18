@@ -186,13 +186,14 @@ export default function EditorPage() {
           </div>
         </aside>
 
-        {/* Canvas */}
         <main className="ed-canvas">
           <div className="canvas-bg">
             <div ref={stageRef} className="mockup-stage" style={{
-              background: bg, padding: cfg.padding,
+              background: bg, 
+              padding: `${cfg.padding}px`,
               aspectRatio: cfg.aspectRatio !== 'free' ? cfg.aspectRatio : undefined,
-              width: cfg.aspectRatio !== 'free' ? '580px' : undefined,
+              width: cfg.aspectRatio === 'free' ? 'auto' : undefined,
+              minWidth: '480px',
             }}>
               <div className="win" style={{
                 background: t.win, borderRadius: cfg.radius,
