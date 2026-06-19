@@ -25,36 +25,6 @@ No backend. No server. Everything runs in the browser.
 
 ---
 
-## 📸 Screenshots
-
-### 🏠 Home Page — Landing & Hero Section
-<img src="screenshots/home.png" alt="CodeFrame Home Page" width="100%"/>
-
-> Hero section with animated headline, live code preview window, CTA buttons, and features grid.
-
----
-
-### ⌨️ Editor Page — Main Code Mockup Designer
-<img src="screenshots/editor.png" alt="CodeFrame Editor Page" width="100%"/>
-
-> Paste your code → choose theme & background → adjust canvas → export as PNG in one click.
-
----
-
-### 💰 Pricing Page — Plans & Individual Purchases
-<img src="screenshots/pricing.png" alt="CodeFrame Pricing Page" width="100%"/>
-
-> Three equal plan cards — Free (₹0), Pro (₹199/mo), Team (₹499/mo) — with Add to Cart functionality and individual theme/background pricing.
-
----
-
-### ℹ️ About Page — Team & Mission
-<img src="screenshots/about.png" alt="CodeFrame About Page" width="100%"/>
-
-> Stats (10,000+ screenshots, 3,500+ users), mission, tech stack, development timeline, and team section.
-
----
-
 ## ✨ Features
 
 <table>
@@ -183,8 +153,8 @@ codeframe/
 
 ```bash
 # 1 — Clone the repository
-git clone https://github.com/codebyakshay30/code_frame.git
-cd code_frame
+git clone https://github.com/akshaysharma150096725107/codeframe.git
+cd codeframe
 
 # 2 — Install dependencies
 npm install
